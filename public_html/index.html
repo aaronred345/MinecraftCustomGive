@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="index.css">
         <title>Give Generator</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
     </head>
     <body>
+        <div id="normalGive">
+            <span id="playerName">Player name: </span> <input id="playerNameBox" value="@a" onkeyup="updateCommandText();"> <br/>
+            <span id="itemAmount">Amount: </span> <input id="itemAmountText" onkeyup="updateCommandText();"> <br/>
+            <span id="itemId">Item Id: </span> <input id="itemIdBox" onkeyup="updateCommandText();"> <br/>
+            <span id="itemDamage">Damage Value: </span> <input id="itemDamageBox" onkeyup="updateCommandText();"> <br/>
+        </div>
         
+        <div id="displayContent">
+            
+        </div>
     </body>
 </html>

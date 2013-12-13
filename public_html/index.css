@@ -1,0 +1,56 @@
+input {
+    -webkit-border-radius: 5px; //For Safari, etc.
+    -moz-border-radius: 5px; //For Mozilla, etc.
+    border-radius: 5px; //CSS3 Feature
+}
+
+#normalGive {
+    width:400px;
+    padding: 10px;
+    border: 7px ridge crimson;
+    margin: 10px;
+    background-color: #CC8080;
+}
+
+#playerName {
+    position: relative;
+    left: 10px;
+}
+
+#playerNameBox {
+    position: relative;
+    width: 275px;
+    left: 15px;
+}
+
+#itemId {
+    position: relative;
+    left: 10px;
+}
+
+#itemIdBox {
+    position:relative;
+    left: 15px;
+    width: 305px;
+}
+
+#itemAmount {
+    position: relative;
+    left: 10px;
+}
+
+#itemAmountBox {
+    
+}
+
+#itemDamage {
+    position: relative;
+    left: 10px;
+}
+
+#itemDamageBox {
+    position: relative;
+    left: 15px;
+    width: 260px;
+}
+
