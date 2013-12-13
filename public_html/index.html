@@ -6,14 +6,17 @@
     </head>
     <body>
         <div id="normalGive">
+            <span id="normalTitle"><b>Standard Settings</b></span> <br/>
             <span id="playerName">Player name: </span> <input id="playerNameBox" value="@a" onkeyup="updateCommandText();"> <br/>
-            <span id="itemAmount">Amount: </span> <input id="itemAmountText" onkeyup="updateCommandText();"> <br/>
+            <span id="itemAmount">Amount: </span> <input id="itemAmountBox" onkeyup="updateCommandText();"> <br/>
             <span id="itemId">Item Id: </span> <input id="itemIdBox" onkeyup="updateCommandText();"> <br/>
             <span id="itemDamage">Damage Value: </span> <input id="itemDamageBox" onkeyup="updateCommandText();"> <br/>
         </div>
         
         <div id="displayContent">
-            
+            <span id="displayTitle"><b>Display Attributes</b></span> <br>
+            <span id="itemName">Item Name: </span> <input id="itemNameBox" onkeyup="updateCommandText();"> <br/>
+            <span id="itemLore">Item Lore (Use \n for a new line): </span> <input id="itemLoreBox" onkeyup="updateCommandText();">
         </div>
     </body>
 </html>

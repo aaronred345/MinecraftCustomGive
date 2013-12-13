@@ -12,6 +12,54 @@ input {
     background-color: #CC8080;
 }
 
+#normalTitle {
+    position: relative;
+    left: 115px;
+}
+
+#normalTitle b {
+    font-size: 25px;
+}
+
+#displayTitle {
+    position: relative;
+    left: 100px;
+}
+
+#displayTitle b {
+    font-size: 25px;
+}
+
+#displayContent {    
+    width: 400px;
+    padding: 10px;
+    border: 7px ridge green;
+    background-color: yellowgreen;
+    margin: 10px;
+}
+
+#itemName {
+    position: relative;
+    left: 10px;
+}
+
+#itemNameBox {
+    position: relative;
+    left: 20px;
+    width: 277px;
+}
+
+#itemLore {
+    position: relative;
+    left: 10px;
+}
+
+#itemLoreBox{
+    position: relative;
+    left: 20px;
+    width: 148px;
+}
+
 #playerName {
     position: relative;
     left: 10px;
@@ -40,7 +88,9 @@ input {
 }
 
 #itemAmountBox {
-    
+    position: relative;
+    left: 15px;
+    width: 300px;
 }
 
 #itemDamage {
