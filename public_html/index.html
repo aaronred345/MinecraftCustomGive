@@ -2,11 +2,12 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="index.css">
+        <script src="index.js"></script>
         <title>Give Generator</title>
     </head>
-    <body>
+    <body onload="onload();">
         <div id="normalGive">
-            <span id="normalTitle"><b>Standard Settings</b></span> <br/>
+            <span id="normalTitle"><b>Standard Attributes</b></span> <br/>
             <span id="playerName">Player name: </span> <input id="playerNameBox" value="@a" onkeyup="updateCommandText();"> <br/>
             <span id="itemAmount">Amount: </span> <input id="itemAmountBox" onkeyup="updateCommandText();"> <br/>
             <span id="itemId">Item Id: </span> <input id="itemIdBox" onkeyup="updateCommandText();"> <br/>
@@ -17,6 +18,40 @@
             <span id="displayTitle"><b>Display Attributes</b></span> <br>
             <span id="itemName">Item Name: </span> <input id="itemNameBox" onkeyup="updateCommandText();"> <br/>
             <span id="itemLore">Item Lore (Use \n for a new line): </span> <input id="itemLoreBox" onkeyup="updateCommandText();">
+        </div>
+        
+        <div id="enchmentContent">
+            
+        </div>
+        
+        <div id="attributeContent">
+            <b>Attribute Attributes</b> <br/>
+            <a href="#" class="addAttribute" onclick="modal('attrModal');">Add Attribute</a>
+        </div>
+        
+        <div id="attrModal">
+            <div>
+                <b>Attributes</b> <br>
+                <select id="attributeSelection">
+                    <option value="generic.maxHealth">Max Health</option>
+                    <option value="generic.followRange">Follow Range</option>
+                    <option value="generic.knockbackResistance">Knockback Resistance</option>
+                    <option value="generic.movementSpeed">Movement Speed</option>
+                    <option value="generic.attackDamage">Attack Damage</option>
+                    <option value="horse.jumpStrength">Jump Strength</option>
+                    <option value="generic.spawnReinforcements">Spawn Reinforcements</option>
+                </select> <br/> 
+                <b>Modifier Amount</b>
+                <input id="attributeModifier"><br/>
+                <b>Modifier Operation</b>
+                <select id="attributeOperation">
+                    <option value="0">0 - &plusmn;amount</option>
+                    <option value="1">1 - &plusmn;amount % (Additive)</option>
+                    <option value="2">2 - &plusmn;amount % (Multiplicative)</option>
+                </select> <br/>
+                
+                <a href="#" class="cancelAttr" onclick="modal('attrModal');">Cancel</a> <a href="#" class="acceptAttr" onclick="buildAttrString();">Accept</a>
+            </div>
         </div>
     </body>
 </html>
