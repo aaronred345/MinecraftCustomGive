@@ -1,7 +1,25 @@
 input {
-    -webkit-border-radius: 5px; //For Safari, etc.
-    -moz-border-radius: 5px; //For Mozilla, etc.
-    border-radius: 5px; //CSS3 Feature
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#giveString {
+    position: absolute;
+    left: 475px;
+    top: 50px;
+    width: 500px;
+}
+
+#copy {
+    position: absolute;
+    top: 50px;
+    left: 980px;
+}
+
+#finishButton {
+    position: absolute;
+    left: 475px;
 }
 
 #normalGive {
@@ -130,6 +148,32 @@ input {
     font-size: 30px;
 }
 
+#enchModal {
+    visibility: hidden;
+    position: absolute;
+    background-color: gray;
+    opacity: .65;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1000;
+}
+
+#enchModal div {
+    width: 300px;
+    margin: 100px auto;
+    background-color: darkturquoise;
+    border: 1px solid #000;
+    padding: 15px;
+    text-align: center;
+}
+
+#enchModal div b {
+    font-size: 30px;
+}
+
 #attributeContent {    
     height: auto;
     width: 400px;
@@ -143,6 +187,30 @@ input {
     position: relative;
     left: 90px;    
     font-size: 25px;
+}
+
+#enchContent {
+    height: auto;
+    width: 400px;
+    padding: 10px;
+    border: 7px ridge dodgerblue;
+    background-color: deepskyblue;
+    margin: 10px;
+}
+
+#enchContent  b {
+    position: relative;
+    left: 67px;
+    font-size: 25px;
+}
+
+.attribute {
+    height: auto;
+    width: 365px;
+    padding: 10px;
+    border: 7px ridge #7100ff;
+    background-color: #af8fff;
+    margin-top: 15px;
 }
 
 .addAttribute {
@@ -285,4 +353,52 @@ input {
 }.acceptAttr:active {
     position:relative;
     top:7px;
+}
+
+.addEnch {
+    position: relative;
+    left: 115px;
+    top: 5px;
+    -moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+    box-shadow:inset 0px 1px 0px 0px #97c4fe;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0) );
+    background:-moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');
+    background-color:#3d94f6;
+    -webkit-border-top-left-radius:0px;
+    -moz-border-radius-topleft:0px;
+    border-top-left-radius:0px;
+    -webkit-border-top-right-radius:0px;
+    -moz-border-radius-topright:0px;
+    border-top-right-radius:0px;
+    -webkit-border-bottom-right-radius:0px;
+    -moz-border-radius-bottomright:0px;
+    border-bottom-right-radius:0px;
+    -webkit-border-bottom-left-radius:0px;
+    -moz-border-radius-bottomleft:0px;
+    border-bottom-left-radius:0px;
+    text-indent:0;
+    border:1px solid #337fed;
+    display:inline-block;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    font-style:normal;
+    height:40px;
+    line-height:40px;
+    width:147px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 0px #1570cd;
+}
+.addEnch:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #3d94f6) );
+    background:-moz-linear-gradient( center top, #1e62d0 5%, #3d94f6 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6');
+    background-color:#1e62d0;
+}.addEnch:active {
+    position:relative;
+    top:6px;
 }

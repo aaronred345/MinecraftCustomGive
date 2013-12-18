@@ -6,27 +6,35 @@
         <title>Give Generator</title>
     </head>
     <body onload="onload();">
+        <div id="finishButton">
+            <a href="#" class="acceptAttr" onclick="buildGiveString();">Finish</a>
+        </div>
+        
+        <input id="giveString" disabled>
+        <button id="copy" onclick="copyToClipboard();">Copy to Clipboard</button>
+        
         <div id="normalGive">
             <span id="normalTitle"><b>Standard Attributes</b></span> <br/>
-            <span id="playerName">Player name: </span> <input id="playerNameBox" value="@a" onkeyup="updateCommandText();"> <br/>
-            <span id="itemAmount">Amount: </span> <input id="itemAmountBox" onkeyup="updateCommandText();"> <br/>
-            <span id="itemId">Item Id: </span> <input id="itemIdBox" onkeyup="updateCommandText();"> <br/>
-            <span id="itemDamage">Damage Value: </span> <input id="itemDamageBox" onkeyup="updateCommandText();"> <br/>
+            <span id="playerName">Player name: </span> <input id="playerNameBox" value="@a" > <br/>
+            <span id="itemAmount">Amount: </span> <input id="itemAmountBox" > <br/>
+            <span id="itemId">Item Id: </span> <input id="itemIdBox" > <br/>
+            <span id="itemDamage">Damage Value: </span> <input id="itemDamageBox" > <br/>
         </div>
         
         <div id="displayContent">
             <span id="displayTitle"><b>Display Attributes</b></span> <br>
-            <span id="itemName">Item Name: </span> <input id="itemNameBox" onkeyup="updateCommandText();"> <br/>
-            <span id="itemLore">Item Lore (Use \n for a new line): </span> <input id="itemLoreBox" onkeyup="updateCommandText();">
-        </div>
-        
-        <div id="enchmentContent">
-            
+            <span id="itemName">Item Name: </span> <input id="itemNameBox" > <br/>
+            <span id="itemLore">Item Lore (Use \n for a new line): </span> <input id="itemLoreBox" >
         </div>
         
         <div id="attributeContent">
             <b>Attribute Attributes</b> <br/>
             <a href="#" class="addAttribute" onclick="modal('attrModal');">Add Attribute</a>
+        </div>
+        
+        <div id="enchContent">
+            <b>Enchantment Attributes</b> <br/>
+            <a href="#" class="addEnch" onclick="modal('enchModal');">Add Enchantment</a>
         </div>
         
         <div id="attrModal">
@@ -51,6 +59,36 @@
                 </select> <br/>
                 
                 <a href="#" class="cancelAttr" onclick="modal('attrModal');">Cancel</a> <a href="#" class="acceptAttr" onclick="buildAttrString();">Accept</a>
+            </div>
+        </div>
+        
+        <div id="enchModal">
+            <div>
+                <b>Enchantment</b>
+                <select id="enchantment">
+                    <option value="0">Protection</option>
+                    <option value="1">Fire Protection</option>
+                    <option value="2">Feather Falling</option>
+                    <option value="3">Blast Protection</option>
+                    <option value="4">Projectile Protection</option>
+                    <option value="5">Respiration</option>
+                    <option value="6">Aqua Affinity</option>
+                    <option value="7">Thorns</option>
+                    <option value="34">Unbreaking</option>
+                    <option value="16">Sharpness</option>
+                    <option value="17">Smite</option>
+                    <option value="18">Bane of Arthropods</option>
+                    <option value="19">Knockback</option>
+                    <option value="20">Fire Aspect</option>
+                    <option value="21">Looting</option>
+                    <option value="32">Efficiency</option>
+                    <option value="33">Silk Touch</option>
+                    <option value="35">Fortune</option>
+                </select> <br/>
+                
+                <b>Level</b> <br/>
+                <input id="enchLvl"> <br/>
+                <a href="#" class="cancelAttr" onclick="modal('enchModal');">Cancel</a> <a href="#" class="acceptAttr" onclick="buildEnchString();">Accept</a>
             </div>
         </div>
     </body>
