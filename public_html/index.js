@@ -7,6 +7,20 @@ function onload() {
 
 }
 
+function resetPlayerName() {
+    if (document.getElementById("playerNameBox").value === "")
+    {
+        document.getElementById("playerNameBox").value = "@a";
+    }
+}
+
+function resetItemDamage() {
+    if (document.getElementById("itemDamageBox").value === "")
+    {
+        document.getElementById("itemDamageBox").value = "0";
+    }
+}
+
 function copyToClipboard() {
     var text = document.getElementById("giveString").value;
     window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
@@ -61,7 +75,7 @@ function buildGiveString() {
     var iDamage = document.getElementById("itemDamageBox").value;
     var iName = document.getElementById("itemNameBox").value;
     var iLore = document.getElementById("itemLoreBox").value.replace("\\n", "\",\"");
-    
+
     var iDisplay = "display:{Name:\"" + iName + "\",Lore:[\"" + iLore + "\"]}";
     if (iName === "")
     {
@@ -75,8 +89,8 @@ function buildGiveString() {
     {
         iDisplay = "display:{}";
     }
-    
-    
+
+
     var iAttr = "AttributeModifiers:[" + attrString + "]";
     var iEnch = "ench:[" + enchString + "]";
 
