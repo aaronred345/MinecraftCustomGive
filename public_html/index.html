@@ -2,41 +2,54 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
         <script src="index.js"></script>
+
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+        <script>
+            $.getJSON("items.json", function(data) {
+                $("#itemIdBox").autocomplete({
+                    source:data
+                })
+            });
+        </script>
+
         <title>Give Generator</title>
     </head>
     <body onload="onload();">
         <div id="finishButton">
             <a href="#" class="acceptAttr" onclick="buildGiveString();">Finish</a>
         </div>
-        
+
         <input id="giveString" disabled>
         <button id="copy" onclick="copyToClipboard();">Copy to Clipboard</button>
-        
+
         <div id="normalGive">
             <span id="normalTitle"><b>Standard Attributes</b></span> <br/>
             <span id="playerName">Player name: </span> <input id="playerNameBox" onkeyup="resetPlayerName();" value="@a" > <br/>
             <span id="itemAmount">Amount: </span> <input id="itemAmountBox" > <br/>
-            <span id="itemId">Item Id: </span> <input id="itemIdBox" > <br/>
+            <span id="itemId">Item Id: </span> <input type="text" id="itemIdBox" > <br/>
             <span id="itemDamage">Damage Value: </span> <input id="itemDamageBox" onkeyup="resetItemDamage();" value="0"> <br/>
         </div>
-        
+
         <div id="displayContent">
             <span id="displayTitle"><b>Display Attributes</b></span> <br>
             <span id="itemName">Item Name: </span> <input id="itemNameBox" > <br/>
             <span id="itemLore">Item Lore (Use \n for a new line): </span> <input id="itemLoreBox" >
         </div>
-        
+
         <div id="attributeContent">
             <b>Attribute Attributes</b> <br/>
             <a href="#" class="addAttribute" onclick="modal('attrModal');">Add Attribute</a>
         </div>
-        
+
         <div id="enchContent">
             <b>Enchantment Attributes</b> <br/>
             <a href="#" class="addEnch" onclick="modal('enchModal');">Add Enchantment</a>
         </div>
-        
+
         <div id="attrModal">
             <div>
                 <b>Attributes</b> <br>
@@ -57,11 +70,11 @@
                     <option value="1">1 - &plusmn;amount % (Additive)</option>
                     <option value="2">2 - &plusmn;amount % (Multiplicative)</option>
                 </select> <br/>
-                
+
                 <a href="#" class="cancelAttr" onclick="modal('attrModal');">Cancel</a> <a href="#" class="acceptAttr" onclick="buildAttrString();">Accept</a>
             </div>
         </div>
-        
+
         <div id="enchModal">
             <div>
                 <b>Enchantment</b>
@@ -91,7 +104,7 @@
                     <option value="61">Luck of the Sea</option>
                     <option value="62">Lure</option>
                 </select> <br/>
-                
+
                 <b>Level</b> <br/>
                 <input id="enchLvl"> <br/>
                 <a href="#" class="cancelAttr" onclick="modal('enchModal');">Cancel</a> <a href="#" class="acceptAttr" onclick="buildEnchString();">Accept</a>
